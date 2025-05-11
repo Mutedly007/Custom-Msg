@@ -1,0 +1,45 @@
+name: custommsg
+version: '1.0-SNAPSHOT'
+main: me.mutedly.custommsg.Custommsg
+api-version: '1.21'
+authors: [ Mutedly ]
+description: A plugin where you can change your join/leave messages (Compatible with Paper 1.21.4)
+
+commands:
+  customjoin:
+    description: Set your custom join message
+    usage: /customjoin <message>
+    aliases: [cjoin]
+  customleave:
+    description: Set your custom leave message
+    usage: /customleave <message>
+    aliases: [cleave]
+  custommessage:
+    description: Admin commands for managing custom messages
+    usage: /custommessage <help|set|reset|view|reload>
+    aliases: [cmsg]
+
+permissions:
+  custommsg.use:
+    description: Allows use of basic custom message commands
+    default: true
+  custommsg.admin:
+    description: Gives access to all admin commands
+    default: op
+    children:
+      custommsg.admin.set: true
+      custommsg.admin.reset: true
+      custommsg.admin.view: true
+      custommsg.admin.reload: true
+  custommsg.admin.set:
+    description: Allows setting other players' join/leave messages
+    default: op
+  custommsg.admin.reset:
+    description: Allows resetting other players' join/leave messages
+    default: op
+  custommsg.admin.view:
+    description: Allows viewing other players' join/leave messages
+    default: op
+  custommsg.admin.reload:
+    description: Allows reloading the plugin configuration
+    default: op

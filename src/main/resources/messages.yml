@@ -1,0 +1,6 @@
+# CustomMsg Messages Storage
+# This file stores all player join and leave messages
+
+messages:
+  join: {}
+  leave: {}

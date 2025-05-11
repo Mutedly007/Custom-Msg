@@ -1,0 +1,35 @@
+# CustomMsg Configuration
+
+# Message Settings
+settings:
+  max-length: 100 # Maximum length of custom messages
+  allow-color-codes: true # Whether to allow color codes in messages
+  strip-invalid-color-codes: true # Remove invalid color codes instead of rejecting the message
+
+# Default Messages
+default-messages:
+  join: "&eWelcome %player% to the server"
+  leave: "&e%player% left the server"
+
+# Admin Messages
+admin-messages:
+  no-permission: "&cYou don't have permission to use this command!"
+  player-not-found: "&cPlayer not found!"
+  message-set: "&aSuccessfully set &e%player%&a's &e%type%&a message!"
+  message-reset: "&aSuccessfully reset &e%player%&a's &e%type%&a message!"
+  config-reloaded: "&aConfiguration reloaded successfully!"
+
+# Blocked Content
+blocked:
+  words:
+    - "badword1"
+    - "badword2"
+  color-codes:
+    - "&k" # Don't allow obfuscated text
+    - "&l" # Don't allow bold text
+
+# Storage Settings
+storage:
+  type: "yaml"
+  auto-save: true
+  save-interval: 300 # In seconds (5 minutes)
